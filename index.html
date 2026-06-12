@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+<title>Celebrating Your 400th Performance</title>
+
+<style>
+body{
+    background:#fff2bd;
+      font-family: "Shippori Mincho", serif;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.card{
+    background:white;
+    border:3px solid #008746;
+    border-radius:20px;
+    padding:40px;
+    max-width:600px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    color:#008746;
+    margin-bottom:20px;
+}
+
+.message{
+    line-height:2;
+    color:#444;
+}
+
+@keyframes fadeUp {from {opacity: 0;transform: translateY(25px);}to {opacity: 1;transform: translateY(0);}}
+.card{background:white;border:3px solid#008746 ;border-radius:20px;padding:40px;max-width:600px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.1);
+opacity:0;
+animation: fadeUp 1.2s ease forwards;
+}
+.message{line-height:2;color:#444;
+opacity:0;
+animation: fadeUp 1.2s ease forwards;
+animation-delay:0.8s;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>祝! 400公演 🎉</h1>
+
+<div class="message">
+400回ご出演おめでとうございます!<br><br>
+
+いつも素敵な時間をありがとうございます。<br>
+これからも応援しております。
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+window.addEventListener('load', function() {
+
+  confetti({
+    particleCount: 150,
+    spread: 100,
+    origin: {
+      y: 0.6
+    }
+  });
+
+  setTimeout(function() {
+    confetti({
+      particleCount: 80,
+      angle: 60,
+      spread: 70,
+      origin: {
+        x: 0,
+        y: 0.7
+      }
+    });
+  }, 300);
+
+  setTimeout(function() {
+    confetti({
+      particleCount: 80,
+      angle: 120,
+      spread: 70,
+      origin: {
+        x: 1,
+        y: 0.7
+      }
+    });
+  }, 500);
+
+});
+</script>
+</body>
+</html>
